@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HemmaLingo - Jifunze Kiswahili kwa njia nyepesi. Masomo, mazoezi, maswali na mitihani.">
+  <title>HemmaLingo - Kiswahili kwa Njia Nyepesi</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #075e54, #128c7e);
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    nav {
+      background: #063f39;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    nav button:hover {
+      background: #128c7e;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 20px;
+      background: white;
+    }
+
+    .hero h2 {
+      color: #075e54;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #075e54;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      background: #128c7e;
+    }
+
+    .search {
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    .search input {
+      width: 90%;
+      max-width: 600px;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    section {
+      padding: 35px 15px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #075e54;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      color: #075e54;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .lesson {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .lesson h3 {
+      color: #075e54;
+      margin-bottom: 10px;
+    }
+
+    .lesson ul {
+      margin-left: 20px;
+    }
+
+    .quiz {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    .question label {
+      display: block;
+      padding: 8px;
+      margin: 5px 0;
+      background: #f1f5f4;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8f5e9;
+      border-radius: 8px;
+      display: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #063f39;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 30px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      nav button {
+        font-size: 13px;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>📚 HemmaLingo</h1>
+  <p>Kiswahili kwa njia nyepesi</p>
+</header>
+
+<nav>
+  <button onclick="onyesha('nyumbani')">🏠 Mwanzo</button>
+  <button onclick="onyesha('madarasa')">📚 Madarasa</button>
+  <button onclick="onyesha('masomo')">📖 Masomo</button>
+  <button onclick="onyesha('quiz')">🧠 Quiz</button>
+  <button onclick="onyesha('kuhusu')">ℹ️ Kuhusu</button>
+</nav>
+
+<main>
+
+  <div id="nyumbani">
+
+    <div class="hero">
+      <h2>Jifunze. Elewa. Faulu.</h2>
+      <p>
+        Karibu HemmaLingo — tovuti ya kujifunzia Kiswahili kwa lugha rahisi,
+        yenye masomo, mifano, mazoezi, maswali na quiz.
+      </p>
+
+      <div class="buttons">
+        <button class="btn" onclick="onyesha('madarasa')">
+          Anza Kujifunza
+        </button>
+
+        <button class="btn" onclick="onyesha('quiz')">
+          Jaribu Quiz
+        </button>
+      </div>
+    </div>
+
+    <div class="search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Tafuta somo au mada..."
+        onkeyup="tafuta()">
+    </div>
+
+    <section>
+      <h2>Kwa nini HemmaLingo?</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>📱 Rahisi kwa Simu</h3>
+          <p>Jifunze kwa kutumia simu yako wakati wowote.</p>
+        </div>
+
+        <div class="card">
+          <h3>📖 Masomo</h3>
+          <p>Masomo yameelezwa kwa lugha rahisi na mifano.</p>
+        </div>
+
+        <div class="card">
+          <h3>📝 Mazoezi</h3>
+          <p>Jipime kwa maswali na mazoezi mbalimbali.</p>
+        </div>
+
+        <div class="card">
+          <h3>🧠 Quiz</h3>
+          <p>Jaribu quiz na ujue kiwango chako cha uelewa.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+  <div id="madarasa" class="hidden">
+
+    <section>
+      <h2>📚 Chagua Darasa au Kidato</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Darasa la I</h3>
+          <p>Kiswahili cha msingi</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Darasa la II</h3>
+          <p>Kusoma na kuandika</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Darasa la III</h3>
+          <p>Sarufi na msamiati</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Darasa la IV</h3>
+          <p>Kiswahili na mawasiliano</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Darasa la V</h3>
+          <p>Sarufi na uandishi</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Darasa la VI</h3>
+          <p>Ufahamu na matumizi ya lugha</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Darasa la VII</h3>
+          <p>Maandalizi ya mtihani</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Kidato cha I</h3>
+          <p>Kiswahili</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Kidato cha II</h3>
+          <p>Kiswahili</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Kidato cha III</h3>
+          <p>Kiswahili</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+        <div class="card">
+          <h3>Kidato cha IV</h3>
+          <p>Kiswahili na maandalizi ya mtihani</p>
+          <button class="btn" onclick="onyesha('masomo')">Fungua</button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+  <div id="masomo" class="hidden">
+
+    <section>
+      <h2>📖 Masomo ya Kiswahili</h2>
+
+      <div class="lesson searchable">
+        <h3>1. Nomino</h3>
+        <p>
+          Nomino ni maneno yanayotaja majina ya watu, wanyama, vitu,
+          mahali au hali.
+        </p>
+        <p><strong>Mifano:</strong> mtoto, mwalimu, shule, mbwa, furaha.</p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>2. Vitenzi</h3>
+        <p>
+          Kitenzi ni neno linaloonyesha tendo au hali.
+        </p>
+        <p><strong>Mifano:</strong> soma, cheza, kula, andika, tembea.</p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>3. Vivumishi</h3>
+        <p>
+          Kivumishi ni neno linaloeleza au kufafanua nomino.
+        </p>
+        <p><strong>Mifano:</strong> mtoto mzuri, nyumba kubwa, gari jipya.</p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>4. Viwakilishi</h3>
+        <p>
+          Kiwakilishi ni neno linalotumika badala ya nomino.
+        </p>
+        <p><strong>Mifano:</strong> mimi, wewe, yeye, sisi, ninyi, wao.</p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>5. Methali</h3>
+        <p>
+          Methali ni semi fupi zenye hekima au mafunzo kuhusu maisha.
+        </p>
+        <p>
+          <strong>Mfano:</strong> Haraka haraka haina baraka.
+        </p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>6. Nahau</h3>
+        <p>
+          Nahau ni usemi wenye maana maalumu ambayo mara nyingi si maana
+          ya moja kwa moja ya maneno yaliyotumika.
+        </p>
+        <p>
+          <strong>Mfano:</strong> Kupiga moyo konde — kujipa moyo.
+        </p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>7. Ufahamu</h3>
+        <p>
+          Ufahamu ni uwezo wa kusoma habari na kuelewa ujumbe uliomo
+          ndani yake.
+        </p>
+      </div>
+
+      <div class="lesson searchable">
+        <h3>8. Insha</h3>
+        <p>
+          Insha ni maandishi yanayowasilisha mawazo kuhusu mada fulani
+          kwa mpangilio unaoeleweka.
+        </p>
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <div id="quiz" class="hidden">
+
+    <section>
+      <h2>🧠 Quiz ya Kiswahili</h2>
+
+      <div class="quiz">
+
+        <div class="question">
+          <p><strong>1. Nomino ni nini?</strong></p>
+
+          <label>
+            <input type="radio" name="q1" value="a">
+            Neno linalotaja jina
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="b">
+            Neno linaloonyesha tendo
+          </label>
+
+          <label>
+            <input type="radio" name="q1" value="c">
+            Neno linaloonyesha wakati
+          </label>
+        </div>
+
+
+        <div class="question">
+          <p><strong>2. Kipi ni kitenzi?</strong></p>
+
+          <label>
+            <input type="radio" name="q2" value="a">
+            Mzuri
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="b">
+            Soma
+          </label>
+
+          <label>
+            <input type="radio" name="q2" value="c">
+            Kitabu
+          </label>
+        </div>
+
+
+        <div class="question">
+          <p><strong>3. Methali ni nini?</strong></p>
+
+          <label>
+            <input type="radio" name="q3" value="a">
+            Jina la mtu
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="b">
+            Usemi wenye hekima au mafunzo
+          </label>
+
+          <label>
+            <input type="radio" name="q3" value="c">
+            Kitendo
+          </label>
+        </div>
+
+
+        <button class="btn" onclick="angaliaMajibu()">
+          Angalia Majibu
+        </button>
+
+        <div id="result" class="result"></div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <div id="kuhusu" class="hidden">
+
+    <section>
+      <h2>ℹ️ Kuhusu HemmaLingo</h2>
+
+      <div class="lesson">
+        <h3>HemmaLingo ni nini?</h3>
+
+        <p>
+          HemmaLingo ni jukwaa la kujifunzia Kiswahili kwa njia rahisi,
+          linalolenga kuwasaidia wanafunzi kuelewa masomo, kufanya
+          mazoezi na kujiandaa kwa mitihani.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Kauli mbiu:</strong>
+          Jifunze. Elewa. Faulu.
+        </p>
+
+        <br>
+
+        <p>
+          Tovuti hii inalenga kuwa rafiki wa mwanafunzi kwa kutumia
+          simu, kompyuta au kifaa kingine chenye intaneti.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer>
+  <h3>📚 HemmaLingo</h3>
+  <p>Kiswahili kwa njia nyepesi.</p>
+  <p>Jifunze. Elewa. Faulu.</p>
+  <br>
+  <p>&copy; 2026 HemmaLingo. Haki zote zimehifadhiwa.</p>
+</footer>
+
+
+<script>
+
+  function onyesha(id) {
+
+    const sections = [
+      "nyumbani",
+      "madarasa",
+      "masomo",
+      "quiz",
+      "kuhusu"
+    ];
+
+    sections.forEach(function(section) {
+      document.getElementById(section).classList.add("hidden");
+    });
+
+    document.getElementById(id).classList.remove("hidden");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+
+  function tafuta() {
+
+    const input = document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase();
+
+    const lessons = document.querySelectorAll(".searchable");
+
+    lessons.forEach(function(lesson) {
+
+      const text = lesson.textContent.toLowerCase();
+
+      if (text.includes(input)) {
+        lesson.style.display = "block";
+      } else {
+        lesson.style.display = "none";
+      }
+
+    });
+
+    if (input.length > 0) {
+      onyesha("masomo");
+    }
+
+  }
+
+
+  function angaliaMajibu() {
+
+    let score = 0;
+
+    const q1 = document.querySelector(
+      'input[name="q1"]:checked'
+    );
+
+    const q2 = document.querySelector(
+      'input[name="q2"]:checked'
+    );
+
+    const q3 = document.querySelector(
+      'input[name="q3"]:checked'
+    );
+
+
+    if (q1 && q1.value === "a") {
+      score++;
+    }
+
+    if (q2 && q2.value === "b") {
+      score++;
+    }
+
+    if (q3 && q3.value === "b") {
+      score++;
+    }
+
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+      "Umejibu " + score + " kati ya 3. " +
+      (score === 3
+        ? "🎉 Hongera! Umefaulu vizuri."
+        : "💪 Endelea kujifunza na ujaribu tena.");
+
+  }
+
+</script>
+
+</body>
+</html>
