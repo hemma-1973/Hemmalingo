@@ -3,201 +3,223 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="HemmaLingo AI - Learn Kiswahili easily with interactive lessons, quizzes and an AI teacher.">
-<title>HemmaLingo AI | Learn Kiswahili</title>
+
+<meta name="description" content="HemmaLingo - Learn Kiswahili easily with lessons, quizzes and an AI Teacher. Perfect for travelers, expats, students and professionals.">
+
+<title>HemmaLingo | Learn Kiswahili Easily</title>
 
 <style>
 *{box-sizing:border-box}
+
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  line-height:1.6
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f8fb;
+color:#17324d;
+line-height:1.6
 }
+
 header{
-  background:linear-gradient(135deg,#075e54,#0b8f7a);
-  color:white;
-  padding:18px 6%;
-  position:sticky;
-  top:0;
-  z-index:10
+background:linear-gradient(135deg,#075e54,#128c7e);
+color:white;
+padding:18px 5%;
+position:sticky;
+top:0;
+z-index:10
 }
+
 .nav{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+max-width:1150px;
+margin:auto
 }
+
 .logo{
-  font-size:25px;
-  font-weight:bold
+font-size:26px;
+font-weight:800
 }
+
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
-  font-weight:bold
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-weight:bold
 }
+
 .hero{
-  max-width:1100px;
-  margin:auto;
-  padding:70px 20px;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:35px;
-  align-items:center
+background:linear-gradient(135deg,#075e54,#19a974);
+color:white;
+padding:70px 5%;
+text-align:center
 }
+
 .hero h1{
-  font-size:48px;
-  line-height:1.1;
-  margin:0 0 20px
+font-size:46px;
+margin:0 0 15px
 }
+
 .hero p{
-  font-size:19px;
-  color:#4b5563
+font-size:20px;
+max-width:750px;
+margin:0 auto 25px
 }
-.badge{
-  display:inline-block;
-  background:#dff7f1;
-  color:#075e54;
-  padding:7px 13px;
-  border-radius:20px;
-  font-weight:bold
-}
-.buttons{
-  margin-top:25px
-}
+
 .btn{
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  margin:5px
+display:inline-block;
+padding:13px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+margin:5px;
+border:0;
+cursor:pointer
 }
+
 .primary{
-  background:#075e54;
-  color:white
+background:#fff;
+color:#075e54
 }
+
 .secondary{
-  background:white;
-  color:#075e54;
-  border:2px solid #075e54
+background:#063f38;
+color:#fff
 }
-.card{
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08)
-}
-.teacher{
-  text-align:center
-}
-.teacher-icon{
-  font-size:75px
-}
+
 section{
-  padding:55px 20px
+max-width:1150px;
+margin:auto;
+padding:55px 5%
 }
-.container{
-  max-width:1100px;
-  margin:auto
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:10px
 }
-.title{
-  text-align:center;
-  margin-bottom:35px
+
+.section-text{
+text-align:center;
+max-width:750px;
+margin:0 auto 30px
 }
-.title h2{
-  font-size:32px;
-  margin-bottom:8px
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
 }
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,.08)
 }
-.lesson h3{
-  color:#075e54
+
+.card h3{
+margin-top:0;
+color:#075e54
 }
-.lesson span{
-  background:#eef7f5;
-  padding:5px 9px;
-  border-radius:8px;
-  font-size:13px
+
+.badge{
+display:inline-block;
+padding:5px 10px;
+border-radius:20px;
+background:#e7f7ef;
+color:#087443;
+font-size:13px;
+font-weight:bold
 }
-.features{
-  background:#eaf7f4
+
+.lesson{
+border-left:5px solid #19a974
 }
-.feature{
-  text-align:center
-}
-.feature-icon{
-  font-size:40px
-}
-.pricing{
-  background:#fff
-}
-.price{
-  border:2px solid #0b8f7a;
-  text-align:center
-}
-.price h3{
-  color:#075e54
-}
-.amount{
-  font-size:34px;
-  font-weight:bold
-}
+
 .quiz{
-  background:#f0f4ff
+background:#fff8df
 }
-.quiz-box{
-  max-width:700px;
-  margin:auto
+
+.premium{
+background:linear-gradient(135deg,#172b4d,#244d73);
+color:white
 }
-.question{
-  font-size:21px;
-  font-weight:bold
+
+.premium h3{
+color:white
 }
-.answer{
-  display:block;
-  width:100%;
-  padding:13px;
-  margin:9px 0;
-  border:1px solid #ccd3df;
-  background:white;
-  border-radius:9px;
-  text-align:left;
-  cursor:pointer
-}
-.answer:hover{
-  background:#e8f7f4
-}
+
 .ai{
-  background:#075e54;
-  color:white
+background:#eef8ff
 }
-.ai .card{
-  color:#172033
+
+.price{
+font-size:32px;
+font-weight:bold;
+margin:10px 0
 }
+
 footer{
-  background:#10231f;
-  color:white;
-  text-align:center;
-  padding:30px 20px
+background:#092b3f;
+color:white;
+text-align:center;
+padding:35px 20px
 }
-.small{
-  font-size:14px;
-  color:#6b7280
+
+footer a{
+color:#fff;
+margin:0 8px
 }
-@media(max-width:800px){
-  .hero{grid-template-columns:1fr;padding-top:45px}
-  .hero h1{font-size:38px}
-  .grid{grid-template-columns:1fr}
-  nav{display:none}
+
+input{
+width:100%;
+padding:13px;
+border:1px solid #ccd7df;
+border-radius:9px;
+margin:8px 0
+}
+
+.search{
+max-width:650px;
+margin:20px auto
+}
+
+.quiz-box{
+background:white;
+padding:25px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+box-shadow:0 5px 20px rgba(0,0,0,.08)
+}
+
+.option{
+display:block;
+width:100%;
+text-align:left;
+padding:12px;
+margin:8px 0;
+border:1px solid #d8e1e7;
+background:#fff;
+border-radius:9px;
+cursor:pointer
+}
+
+.option:hover{
+background:#eef8f5
+}
+
+#result{
+font-weight:bold;
+margin-top:15px
+}
+
+@media(max-width:700px){
+.hero h1{font-size:34px}
+nav{display:none}
+.logo{font-size:23px}
 }
 </style>
 </head>
@@ -206,286 +228,730 @@ footer{
 
 <header>
 <div class="nav">
-<div class="logo">🌍 HemmaLingo AI</div>
+<div class="logo">🌍 HemmaLingo</div>
+
 <nav>
+<a href="#learn">Learn</a>
 <a href="#lessons">Lessons</a>
 <a href="#quiz">Quiz</a>
 <a href="#premium">Premium</a>
-<a href="#ai">AI Teacher</a>
 </nav>
 </div>
 </header>
 
-<main>
-
 <section class="hero">
-<div>
-<span class="badge">Kiswahili for the world 🌍</span>
 
-<h1>Learn Kiswahili the easy way.</h1>
+<div class="badge">Kiswahili Learning Platform</div>
+
+<h1>Learn Kiswahili the Easy Way</h1>
 
 <p>
-HemmaLingo helps travelers, students, professionals and anyone interested
-in East Africa learn Kiswahili through simple lessons, quizzes and an AI Teacher.
+Learn useful Kiswahili for travel, everyday conversation, school,
+work and life in East Africa.
 </p>
 
-<div class="buttons">
 <a class="btn primary" href="#lessons">Start Learning</a>
 <a class="btn secondary" href="#quiz">Try a Quiz</a>
-</div>
 
-<p class="small">
-Beginner friendly • Mobile friendly • Kiswahili lessons • Interactive learning
-</p>
-</div>
-
-<div class="card teacher">
-<div class="teacher-icon">👨🏾‍🏫</div>
-<h2>Your Kiswahili Teacher</h2>
-<p>
-Learn words, sentences, grammar and everyday conversation step by step.
-</p>
-</div>
 </section>
 
+<section id="learn">
+
+<h2 class="section-title">Who is HemmaLingo for?</h2>
+
+<p class="section-text">
+HemmaLingo helps people from around the world understand and speak
+Kiswahili step by step.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>✈️ Travelers</h3>
+<p>Learn practical Kiswahili phrases for airports, hotels, transport, restaurants and everyday travel.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Expats</h3>
+<p>Build confidence communicating with friends, neighbours, colleagues and local communities.</p>
+</div>
+
+<div class="card">
+<h3>🎓 Students</h3>
+<p>Study Kiswahili grammar, vocabulary, reading and writing through structured lessons.</p>
+</div>
+
+<div class="card">
+<h3>💼 Professionals</h3>
+<p>Learn useful Kiswahili for meetings, business, work and communication.</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="lessons">
-<div class="container">
 
-<div class="title">
-<h2>📚 Kiswahili Lessons</h2>
-<p>Start with the basics and continue step by step.</p>
+<h2 class="section-title">HemmaLingo Lessons</h2>
+
+<p class="section-text">
+Start with the basics and gradually build your Kiswahili.
+</p>
+
+<div class="search">
+<input id="search" type="text" placeholder="Search for a lesson, topic or level..." onkeyup="searchLessons()">
 </div>
 
-<div class="grid">
+<div class="cards" id="lessonList">
 
 <div class="card lesson">
-<span>Beginner</span>
+<span class="badge">Beginner</span>
 <h3>Lesson 1: Greetings</h3>
-<p>Learn common Kiswahili greetings used every day.</p>
-<p><b>Habari?</b> — How are you?</p>
-<p><b>Jambo!</b> — Hello!</p>
+<p>Learn: Jambo, Habari, Asante, Karibu and common greetings.</p>
 </div>
 
 <div class="card lesson">
-<span>Beginner</span>
+<span class="badge">Beginner</span>
 <h3>Lesson 2: Introducing Yourself</h3>
-<p>Learn how to say your name and ask someone's name.</p>
-<p><b>Jina langu ni...</b> — My name is...</p>
+<p>Learn how to say your name, country, occupation and basic information.</p>
 </div>
 
 <div class="card lesson">
-<span>Beginner</span>
+<span class="badge">Beginner</span>
 <h3>Lesson 3: Numbers</h3>
-<p>Learn useful Kiswahili numbers.</p>
-<p>Moja • Mbili • Tatu • Nne • Tano</p>
+<p>Learn Kiswahili numbers from 1 upwards and use them in daily conversation.</p>
 </div>
 
 <div class="card lesson">
-<span>Travel</span>
-<h3>Lesson 4: At the Hotel</h3>
-<p>Useful expressions for travelers staying in Tanzania and East Africa.</p>
+<span class="badge">Beginner</span>
+<h3>Lesson 4: Food & Restaurant</h3>
+<p>Useful Kiswahili for ordering food, asking prices and communicating in restaurants.</p>
 </div>
 
 <div class="card lesson">
-<span>Travel</span>
-<h3>Lesson 5: At the Restaurant</h3>
-<p>Learn how to order food and drinks in Kiswahili.</p>
+<span class="badge">Beginner</span>
+<h3>Lesson 5: Travel</h3>
+<p>Learn phrases for buses, taxis, directions, hotels and travelling around Tanzania.</p>
 </div>
 
 <div class="card lesson">
-<span>Conversation</span>
-<h3>Lesson 6: Everyday Conversation</h3>
-<p>Practice simple conversations with local speakers.</p>
+<span class="badge">Grammar</span>
+<h3>Lesson 6: Aina za Maneno</h3>
+<p>Learn Nomino, Vitenzi and Vivumishi with simple examples.</p>
 </div>
 
 <div class="card lesson">
-<span>Grammar</span>
-<h3>Lesson 7: Parts of Speech</h3>
-<p>Nomino, vitenzi and vivumishi.</p>
+<span class="badge">Grammar</span>
+<h3>Lesson 7: Ngeli za Nomino</h3>
+<p>Understand Kiswahili noun classes using clear examples.</p>
 </div>
 
 <div class="card lesson">
-<span>Grammar</span>
-<h3>Lesson 8: Noun Classes</h3>
-<p>Learn the Kiswahili noun-class system step by step.</p>
-</div>
-
-<div class="card lesson">
-<span>Culture</span>
-<h3>Lesson 9: Tanzanian Kiswahili</h3>
-<p>Understand useful words and expressions commonly heard in Tanzania.</p>
+<span class="badge">School</span>
+<h3>Lesson 8: Kiswahili School</h3>
+<p>Structured Kiswahili learning for primary and secondary students.</p>
 </div>
 
 </div>
-</div>
+
 </section>
 
+<section class="ai">
 
-<section class="features">
-<div class="container">
+<h2 class="section-title">🤖 AI Kiswahili Teacher</h2>
 
-<div class="title">
-<h2>Why HemmaLingo?</h2>
-<p>Designed for people who want practical Kiswahili.</p>
-</div>
+<p class="section-text">
+Practice Kiswahili with an AI Teacher. Ask questions, learn new words,
+practice sentences and improve your confidence.
+</p>
 
-<div class="grid">
+<div class="card" style="max-width:750px;margin:auto;text-align:center">
 
-<div class="card feature">
-<div class="feature-icon">📱</div>
-<h3>Mobile Friendly</h3>
-<p>Learn using your phone wherever you are.</p>
-</div>
+<h3>Ask your Kiswahili Teacher</h3>
 
-<div class="card feature">
-<div class="feature-icon">🧠</div>
-<h3>Simple Learning</h3>
-<p>Lessons are broken into small, easy steps.</p>
-</div>
+<input id="question" placeholder="Example: How do I say 'Where are you going?'">
 
-<div class="card feature">
-<div class="feature-icon">🤖</div>
-<h3>AI Teacher</h3>
-<p>Practice Kiswahili with an intelligent learning assistant.</p>
-</div>
+<button class="btn secondary" onclick="askTeacher()">Ask Teacher</button>
+
+<p id="teacherAnswer"></p>
 
 </div>
-</div>
+
 </section>
 
+<section id="quiz">
 
-<section id="quiz" class="quiz">
+<h2 class="section-title">🎯 Try a Kiswahili Quiz</h2>
+
 <div class="quiz-box">
 
-<div class="title">
-<h2>📝 Try a Kiswahili Quiz</h2>
-<p>Test your knowledge.</p>
-</div>
+<h3>What does “Asante” mean?</h3>
 
-<div class="card">
-<p class="question">
-What does <b>"Asante"</b> mean?
-</p>
+<button class="option" onclick="checkAnswer(false)">Hello</button>
 
-<button class="answer" onclick="checkAnswer(this,false)">
-A. Goodbye
-</button>
+<button class="option" onclick="checkAnswer(true)">Thank you</button>
 
-<button class="answer" onclick="checkAnswer(this,true)">
-B. Thank you
-</button>
+<button class="option" onclick="checkAnswer(false)">Goodbye</button>
 
-<button class="answer" onclick="checkAnswer(this,false)">
-C. Welcome
-</button>
+<button class="option" onclick="checkAnswer(false)">Please</button>
 
-<button class="answer" onclick="checkAnswer(this,false)">
-D. Please
-</button>
-
-<p id="result"></p>
-</div>
+<div id="result"></div>
 
 </div>
+
 </section>
-
-
-<section id="ai" class="ai">
-<div class="container">
-
-<div class="title">
-<h2>🤖 AI Kiswahili Teacher</h2>
-<p>Practice useful Kiswahili conversations.</p>
-</div>
-
-<div class="card">
-<h3>Try this conversation:</h3>
-
-<p><b>Teacher:</b> Habari yako?</p>
-<p><b>You:</b> Nzuri, asante.</p>
-
-<hr>
-
-<p>
-<strong>Tip:</strong> "Habari yako?" is a common way to ask
-"How are you?"
-</p>
-
-<a class="btn primary" href="#lessons">Continue Learning</a>
-</div>
-
-</div>
-</section>
-
 
 <section id="premium">
-<div class="container">
 
-<div class="title">
+<div class="premium card">
+
 <h2>⭐ HemmaLingo Premium</h2>
-<p>Unlock more learning content as HemmaLingo grows.</p>
-</div>
 
-<div class="grid">
+<p>
+Unlock more lessons, structured courses, quizzes, practice activities
+and advanced Kiswahili learning resources.
+</p>
 
-<div class="card price">
-<h3>Free</h3>
-<div class="amount">$0</div>
-<p>Starter lessons</p>
-<p>Basic quizzes</p>
-<p>Mobile learning</p>
-<a class="btn secondary" href="#lessons">Start Free</a>
-</div>
+<div class="price">Premium</div>
 
-<div class="card price">
-<h3>Premium</h3>
-<div class="amount">Coming Soon</div>
-<p>More Kiswahili lessons</p>
-<p>Advanced quizzes</p>
-<p>Conversation practice</p>
-<p>AI Teacher features</p>
-<a class="btn primary" href="#ai">Learn More</a>
-</div>
 
-<div class="card price">
-<h3>For Schools</h3>
-<div class="amount">Coming Soon</div>
-<p>School lessons</p>
-<p>Teacher resources</p>
-<p>Student practice</p>
-<a class="btn secondary" href="#lessons">Explore</a>
-</div>
 
+function askTeacher(){
+
+let q=document.getElementById("question").value.toLowerCase();
+
+let answer=document.getElementById("teacherAnswer");
+
+if(q.includes("where") || q.includes("going")){
+
+answer.innerHTML="🤖 Teacher: “Unaenda wapi?” means “Where are you going?”";
+
+}else if(q.includes("hello") || q.includes("greet")){
+
+answer.innerHTML="🤖 Teacher: “Jambo!” or “<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="HemmaLingo - Learn Kiswahili easily with lessons, quizzes and an AI Teacher. Perfect for travelers, expats, students and professionals.">
+
+<title>HemmaLingo | Learn Kiswahili Easily</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f8fb;
+color:#17324d;
+line-height:1.6
+}
+
+header{
+background:linear-gradient(135deg,#075e54,#128c7e);
+color:white;
+padding:18px 5%;
+position:sticky;
+top:0;
+z-index:10
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+max-width:1150px;
+margin:auto
+}
+
+.logo{
+font-size:26px;
+font-weight:800
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-weight:bold
+}
+
+.hero{
+background:linear-gradient(135deg,#075e54,#19a974);
+color:white;
+padding:70px 5%;
+text-align:center
+}
+
+.hero h1{
+font-size:46px;
+margin:0 0 15px
+}
+
+.hero p{
+font-size:20px;
+max-width:750px;
+margin:0 auto 25px
+}
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+margin:5px;
+border:0;
+cursor:pointer
+}
+
+.primary{
+background:#fff;
+color:#075e54
+}
+
+.secondary{
+background:#063f38;
+color:#fff
+}
+
+section{
+max-width:1150px;
+margin:auto;
+padding:55px 5%
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:10px
+}
+
+.section-text{
+text-align:center;
+max-width:750px;
+margin:0 auto 30px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,.08)
+}
+
+.card h3{
+margin-top:0;
+color:#075e54
+}
+
+.badge{
+display:inline-block;
+padding:5px 10px;
+border-radius:20px;
+background:#e7f7ef;
+color:#087443;
+font-size:13px;
+font-weight:bold
+}
+
+.lesson{
+border-left:5px solid #19a974
+}
+
+.quiz{
+background:#fff8df
+}
+
+.premium{
+background:linear-gradient(135deg,#172b4d,#244d73);
+color:white
+}
+
+.premium h3{
+color:white
+}
+
+.ai{
+background:#eef8ff
+}
+
+.price{
+font-size:32px;
+font-weight:bold;
+margin:10px 0
+}
+
+footer{
+background:#092b3f;
+color:white;
+text-align:center;
+padding:35px 20px
+}
+
+footer a{
+color:#fff;
+margin:0 8px
+}
+
+input{
+width:100%;
+padding:13px;
+border:1px solid #ccd7df;
+border-radius:9px;
+margin:8px 0
+}
+
+.search{
+max-width:650px;
+margin:20px auto
+}
+
+.quiz-box{
+background:white;
+padding:25px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+box-shadow:0 5px 20px rgba(0,0,0,.08)
+}
+
+.option{
+display:block;
+width:100%;
+text-align:left;
+padding:12px;
+margin:8px 0;
+border:1px solid #d8e1e7;
+background:#fff;
+border-radius:9px;
+cursor:pointer
+}
+
+.option:hover{
+background:#eef8f5
+}
+
+#result{
+font-weight:bold;
+margin-top:15px
+}
+
+@media(max-width:700px){
+.hero h1{font-size:34px}
+nav{display:none}
+.logo{font-size:23px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">🌍 HemmaLingo</div>
+
+<nav>
+<a href="#learn">Learn</a>
+<a href="#lessons">Lessons</a>
+<a href="#quiz">Quiz</a>
+<a href="#premium">Premium</a>
+</nav>
 </div>
-</div>
+</header>
+
+<section class="hero">
+
+<div class="badge">Kiswahili Learning Platform</div>
+
+<h1>Learn Kiswahili the Easy Way</h1>
+
+<p>
+Learn useful Kiswahili for travel, everyday conversation, school,
+work and life in East Africa.
+</p>
+
+<a class="btn primary" href="#lessons">Start Learning</a>
+<a class="btn secondary" href="#quiz">Try a Quiz</a>
+
 </section>
 
-</main>
+<section id="learn">
 
+<h2 class="section-title">Who is HemmaLingo for?</h2>
+
+<p class="section-text">
+HemmaLingo helps people from around the world understand and speak
+Kiswahili step by step.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>✈️ Travelers</h3>
+<p>Learn practical Kiswahili phrases for airports, hotels, transport, restaurants and everyday travel.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Expats</h3>
+<p>Build confidence communicating with friends, neighbours, colleagues and local communities.</p>
+</div>
+
+<div class="card">
+<h3>🎓 Students</h3>
+<p>Study Kiswahili grammar, vocabulary, reading and writing through structured lessons.</p>
+</div>
+
+<div class="card">
+<h3>💼 Professionals</h3>
+<p>Learn useful Kiswahili for meetings, business, work and communication.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="lessons">
+
+<h2 class="section-title">HemmaLingo Lessons</h2>
+
+<p class="section-text">
+Start with the basics and gradually build your Kiswahili.
+</p>
+
+<div class="search">
+<input id="search" type="text" placeholder="Search for a lesson, topic or level..." onkeyup="searchLessons()">
+</div>
+
+<div class="cards" id="lessonList">
+
+<div class="card lesson">
+<span class="badge">Beginner</span>
+<h3>Lesson 1: Greetings</h3>
+<p>Learn: Jambo, Habari, Asante, Karibu and common greetings.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">Beginner</span>
+<h3>Lesson 2: Introducing Yourself</h3>
+<p>Learn how to say your name, country, occupation and basic information.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">Beginner</span>
+<h3>Lesson 3: Numbers</h3>
+<p>Learn Kiswahili numbers from 1 upwards and use them in daily conversation.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">Beginner</span>
+<h3>Lesson 4: Food & Restaurant</h3>
+<p>Useful Kiswahili for ordering food, asking prices and communicating in restaurants.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">Beginner</span>
+<h3>Lesson 5: Travel</h3>
+<p>Learn phrases for buses, taxis, directions, hotels and travelling around Tanzania.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">Grammar</span>
+<h3>Lesson 6: Aina za Maneno</h3>
+<p>Learn Nomino, Vitenzi and Vivumishi with simple examples.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">Grammar</span>
+<h3>Lesson 7: Ngeli za Nomino</h3>
+<p>Understand Kiswahili noun classes using clear examples.</p>
+</div>
+
+<div class="card lesson">
+<span class="badge">School</span>
+<h3>Lesson 8: Kiswahili School</h3>
+<p>Structured Kiswahili learning for primary and secondary students.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="ai">
+
+<h2 class="section-title">🤖 AI Kiswahili Teacher</h2>
+
+<p class="section-text">
+Practice Kiswahili with an AI Teacher. Ask questions, learn new words,
+practice sentences and improve your confidence.
+</p>
+
+<div class="card" style="max-width:750px;margin:auto;text-align:center">
+
+<h3>Ask your Kiswahili Teacher</h3>
+
+<input id="question" placeholder="Example: How do I say 'Where are you going?'">
+
+<button class="btn secondary" onclick="askTeacher()">Ask Teacher</button>
+
+<p id="teacherAnswer"></p>
+
+</div>
+
+</section>
+
+<section id="quiz">
+
+<h2 class="section-title">🎯 Try a Kiswahili Quiz</h2>
+
+<div class="quiz-box">
+
+<h3>What does “Asante” mean?</h3>
+
+<button class="option" onclick="checkAnswer(false)">Hello</button>
+
+<button class="option" onclick="checkAnswer(true)">Thank you</button>
+
+<button class="option" onclick="checkAnswer(false)">Goodbye</button>
+
+<button class="option" onclick="checkAnswer(false)">Please</button>
+
+<div id="result"></div>
+
+</div>
+
+</section>
+
+<section id="premium">
+
+<div class="premium card">
+
+<h2>⭐ HemmaLingo Premium</h2>
+
+<p>
+Unlock more lessons, structured courses, quizzes, practice activities
+and advanced Kiswahili learning resources.
+</p>
+
+<div class="price">Premium</div>
+
+<p>
+Perfect for serious learners, travelers, students and professionals.
+</p>
+
+<a class="btn primary" href="#">Join Premium</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">🎓 School Kiswahili</h2>
+
+<p class="section-text">
+HemmaLingo also supports school learners with Kiswahili lessons
+from primary level through secondary school.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Primary 1–7</h3>
+<p>Basic reading, writing, vocabulary, grammar and communication.</p>
+</div>
+
+<div class="card">
+<h3>Form 1–4</h3>
+<p>Grammar, literature, comprehension, writing and examination preparation.</p>
+</div>
+
+<div class="card">
+<h3>Practice</h3>
+<p>Quizzes and exercises to help learners understand and remember.</p>
+</div>
+
+</div>
+
+</section>
 
 <footer>
-<h2>🌍 HemmaLingo AI</h2>
-<p>Learn Kiswahili. Understand East Africa. Connect with people.</p>
-<p>© 2026 HemmaLingo. All rights reserved.</p>
+
+<h2>HemmaLingo</h2>
+
+<p>Kiswahili, kwa njia nyepesi.</p>
+
+<p>
+Learn. Understand. Communicate.
+</p>
+
+<p>
+© 2026 HemmaLingo. All rights reserved.
+</p>
+
 </footer>
 
-
 <script>
-function checkAnswer(button,correct){
 
-const result=document.getElementById("result");
+function searchLessons(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let lessons=document.querySelectorAll(".lesson");
+
+lessons.forEach(function(lesson){
+
+let text=lesson.innerText.toLowerCase();
+
+lesson.style.display=text.includes(input) ? "block" : "none";
+
+});
+
+}
+
+function checkAnswer(correct){
+
+let result=document.getElementById("result");
 
 if(correct){
-result.innerHTML="🎉 Correct! Asante means Thank you.";
-result.style.color="green";
+
+result.innerHTML="✅ Correct! Asante means “Thank you”.";
+
 }else{
-result.innerHTML="❌ Not quite. Try again.";
-result.style.color="red";
+
+result.innerHTML="❌ Not quite. Try again!";
+
 }
 
 }
-</script>
 
-</body>
-</html>
+function askTeacher(){
+
+let q=document.getElementById("question").value.toLowerCase();
+
+let answer=document.getElementById("teacherAnswer");
+
+if(q.includes("where") || q.includes("going")){
+
+answer.innerHTML="🤖 Teacher: “Unaenda wapi?” means “Where are you going?”";
+
+}else if(q.includes("hello") || q.includes("greet")){
+
+answer.innerHTML="🤖 Teacher: “Jambo!” or “Habari!” can be used as a greeting.";
+
+}else if(q.includes("thank")){
+
+answer.innerHTML="🤖 Teacher: “Asante” means “Thank!” can be used as a greeting.";
+
+}else if(q.includes("thank")){
+
+answer.innerHTML="🤖 Teacher: “Asante” means “Thank
