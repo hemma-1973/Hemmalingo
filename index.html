@@ -4,31 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="HemmaLingo - Learn Kiswahili easily with lessons, quizzes and an AI Teacher. Perfect for travelers, expats, students and professionals.">
+<meta name="description" content="HemmaLingo - Learn Kiswahili easily with lessons, quizzes and an AI Teacher for travelers, students, expats and professionals.">
 
 <title>HemmaLingo | Learn Kiswahili Easily</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
+  background:#f4f8f7;
+  color:#173b38;
   line-height:1.6;
 }
 
 header{
-  background:#ffffff;
-  padding:15px 6%;
+  background:linear-gradient(135deg,#075e54,#128c7e);
+  color:white;
+  padding:18px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
   position:sticky;
   top:0;
   z-index:10;
@@ -36,163 +32,203 @@ header{
 
 .logo{
   font-size:25px;
-  font-weight:bold;
-  color:#116530;
+  font-weight:800;
 }
 
 nav a{
+  color:white;
   text-decoration:none;
-  color:#172033;
   margin-left:18px;
   font-weight:bold;
 }
 
 .hero{
-  background:linear-gradient(135deg,#116530,#18864a);
+  background:linear-gradient(135deg,#075e54,#16a085);
   color:white;
   text-align:center;
-  padding:70px 20px;
+  padding:75px 20px;
 }
 
 .hero h1{
-  font-size:42px;
-  margin-bottom:15px;
+  font-size:46px;
+  margin-bottom:12px;
 }
 
 .hero p{
   max-width:700px;
-  margin:auto;
+  margin:0 auto 25px;
   font-size:19px;
-}
-
-.buttons{
-  margin-top:28px;
 }
 
 .btn{
   display:inline-block;
-  padding:13px 22px;
-  margin:6px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  cursor:pointer;
   border:none;
+  background:#fff;
+  color:#075e54;
+  padding:13px 22px;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+  margin:5px;
 }
 
-.primary{
-  background:white;
-  color:#116530;
-}
-
-.secondary{
-  background:#0b4722;
-  color:white;
+.btn.primary{
+  background:#ffcc33;
+  color:#173b38;
 }
 
 .container{
-  width:90%;
+  width:92%;
   max-width:1100px;
-  margin:45px auto;
+  margin:auto;
+}
+
+section{
+  padding:55px 0;
 }
 
 .section-title{
   text-align:center;
+  font-size:30px;
   margin-bottom:30px;
+}
+
+.search{
+  width:100%;
+  padding:16px;
+  border:1px solid #ccd9d6;
+  border-radius:12px;
+  font-size:16px;
+  margin-bottom:25px;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:20px;
 }
 
 .card{
   background:white;
   padding:25px;
-  border-radius:14px;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  border-radius:18px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
 .card h3{
-  color:#116530;
-  margin-bottom:10px;
+  color:#075e54;
+  margin-bottom:8px;
 }
 
-.lesson{
-  border-left:5px solid #116530;
+.card p{
+  color:#55716d;
 }
 
-.quiz{
-  background:#fff8df;
+.progress{
+  background:#dce8e5;
+  height:12px;
+  border-radius:20px;
+  overflow:hidden;
+  margin:15px 0;
 }
 
-.ai{
-  background:#eaf7ef;
+.progress span{
+  display:block;
+  width:68%;
+  height:100%;
+  background:#128c7e;
+}
+
+.quiz-box{
+  background:white;
+  max-width:700px;
+  margin:auto;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.answer{
+  width:100%;
+  padding:13px;
+  margin:7px 0;
+  border:1px solid #ccd9d6;
+  border-radius:10px;
+  background:#f8fbfa;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.answer:hover{
+  background:#e5f4f1;
 }
 
 .premium{
-  background:#172033;
+  background:#075e54;
   color:white;
+  border-radius:22px;
+  padding:40px 25px;
   text-align:center;
-  padding:45px 20px;
-  border-radius:16px;
 }
 
 .premium h2{
-  color:#ffffff;
+  font-size:32px;
   margin-bottom:10px;
 }
 
-.premium .btn{
-  background:#ffffff;
-  color:#116530;
+.ai{
+  background:#e9f7f4;
+  border:2px solid #b9e5dc;
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
 }
 
-#quizBox{
-  margin-top:20px;
-  display:none;
-  background:white;
-  padding:25px;
-  border-radius:12px;
-}
-
-.option{
+.ai input{
   width:100%;
-  padding:12px;
-  margin:7px 0;
-  border:1px solid #ddd;
-  border-radius:7px;
-  background:#f8f8f8;
-  cursor:pointer;
-  text-align:left;
+  padding:14px;
+  margin:15px 0;
+  border:1px solid #ccd9d6;
+  border-radius:10px;
 }
 
-.option:hover{
-  background:#eaf7ef;
-}
-
-#result{
+.result{
   margin-top:15px;
   font-weight:bold;
+  color:#075e54;
 }
 
 footer{
-  background:#172033;
+  background:#123f3b;
   color:white;
   text-align:center;
   padding:30px 15px;
-  margin-top:50px;
 }
 
-@media(max-width:600px){
-  .hero h1{
-    font-size:32px;
+footer a{
+  color:#ffcc33;
+  text-decoration:none;
+}
+
+@media(max-width:700px){
+  header{
+    flex-direction:column;
+    gap:10px;
   }
 
   nav a{
-    margin-left:8px;
+    margin:0 6px;
     font-size:13px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:17px;
   }
 }
 </style>
@@ -201,89 +237,255 @@ footer{
 <body>
 
 <header>
-  <div class="logo">HemmaLingo</div>
+  <div class="logo">🌍 HemmaLingo</div>
 
   <nav>
     <a href="#lessons">Lessons</a>
     <a href="#quiz">Quiz</a>
+    <a href="#ai">AI Teacher</a>
     <a href="#premium">Premium</a>
   </nav>
 </header>
 
 <section class="hero">
-
   <h1>Learn Kiswahili Easily</h1>
 
   <p>
-    Speak, understand and enjoy Kiswahili with simple lessons,
-    quizzes and your AI Teacher.
+    Learn Kiswahili step by step with simple lessons, quizzes
+    and an AI Teacher — perfect for travelers, students, expats
+    and professionals.
   </p>
 
-  <div class="buttons">
-    <a class="btn primary" href="#lessons">Start Learning</a>
-    <button class="btn secondary" onclick="startQuiz()">Try Quiz</button>
-  </div>
-
-  <p style="margin-top:20px;font-size:15px;">
-    Perfect for travelers, expats, students and professionals.
-  </p>
-
+  <a class="btn primary" href="#lessons">Start Learning</a>
+  <a class="btn" href="#quiz">Try a Quiz</a>
 </section>
 
+<section id="lessons">
+<div class="container">
 
-<section class="container" id="lessons">
+  <h2 class="section-title">📚 HemmaLingo Lessons</h2>
 
-  <div class="section-title">
-    <h2>Learn Kiswahili</h2>
-    <p>Start with simple everyday Kiswahili.</p>
-  </div>
+  <input
+    class="search"
+    id="searchBox"
+    type="text"
+    placeholder="Search for a Kiswahili lesson..."
+    onkeyup="searchLessons()"
+  >
 
-  <div class="cards">
-
-    <div class="card lesson">
-      <h3>👋 Greetings</h3>
-      <p><b>Jambo</b> — Hello</p>
-      <p><b>Habari?</b> — How are you?</p>
-      <p><b>Asante</b> — Thank you</p>
-    </div>
-
-    <div class="card lesson">
-      <h3>🗣️ Everyday Words</h3>
-      <p><b>Ndiyo</b> — Yes</p>
-      <p><b>Hapana</b> — No</p>
-      <p><b>Tafadhali</b> — Please</p>
-    </div>
-
-    <div class="card lesson">
-      <h3>✈️ Travel Kiswahili</h3>
-      <p><b>Uwanja wa ndege</b> — Airport</p>
-      <p><b>Hoteli</b> — Hotel</p>
-      <p><b>Nisaidie</b> — Help me</p>
-    </div>
-
-    <div class="card lesson">
-      <h3>🍽️ Food & Restaurant</h3>
-      <p><b>Chakula</b> — Food</p>
-      <p><b>Maji</b> — Water</p>
-      <p><b>Nataka...</b> — I want...</p>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="container">
-
-  <div class="section-title">
-    <h2>Why HemmaLingo?</h2>
-  </div>
-
-  <div class="cards">
+  <div class="cards" id="lessonCards">
 
     <div class="card">
-      <h3>📚 Simple Lessons</h3>
-      <p>Learn Kiswahili step by step without complicated explanations.</p>
+      <h3>🇹🇿 Greetings</h3>
+      <p>Learn common Kiswahili greetings.</p>
+      <button class="btn primary" onclick="lesson('Greetings')">Open Lesson</button>
     </div>
 
-    <div class="card ai">
-      <h3>🤖 AI Teacher</
+    <div class="card">
+      <h3>👤 Introductions</h3>
+      <p>Learn how to introduce yourself.</p>
+      <button class="btn primary" onclick="lesson('Introductions')">Open Lesson</button>
+    </div>
+
+    <div class="card">
+      <h3>🔤 Aina za Maneno</h3>
+      <p>Learn Nomino, Vitenzi and Vivumishi.</p>
+      <button class="btn primary" onclick="lesson('Aina za Maneno')">Open Lesson</button>
+    </div>
+
+    <div class="card">
+      <h3>🗣️ Everyday Kiswahili</h3>
+      <p>Useful words and expressions for daily life.</p>
+      <button class="btn primary" onclick="lesson('Everyday Kiswahili')">Open Lesson</button>
+    </div>
+
+    <div class="card">
+      <h3>✈️ Travel Kiswahili</h3>
+      <p>Useful Kiswahili for travelers.</p>
+      <button class="btn primary" onclick="lesson('Travel Kiswahili')">Open Lesson</button>
+    </div>
+
+    <div class="card">
+      <h3>💼 Business Kiswahili</h3>
+      <p>Useful language for work and business.</p>
+      <button class="btn primary" onclick="lesson('Business Kiswahili')">Open Lesson</button>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:25px;">
+    <h3>Your Learning Progress</h3>
+    <div class="progress"><span></span></div>
+    <strong>68% complete</strong>
+  </div>
+
+</div>
+</section>
+
+<section id="quiz">
+<div class="container">
+
+<h2 class="section-title">🧠 Kiswahili Quiz</h2>
+
+<div class="quiz-box">
+
+<h3>What does "Habari" mean?</h3>
+
+<button class="answer" onclick="checkAnswer(false)">
+Hello / How are you?
+</button>
+
+<button class="answer" onclick="checkAnswer(false)">
+Thank you
+</button>
+
+<button class="answer" onclick="checkAnswer(false)">
+Goodbye
+</button>
+
+<button class="answer" onclick="checkAnswer(true)">
+News / How are things?
+</button>
+
+<div id="quizResult" class="result"></div>
+
+</div>
+</div>
+</section>
+
+<section id="ai">
+<div class="container">
+
+<div class="ai">
+
+<h2>🤖 HemmaLingo AI Teacher</h2>
+
+<p>
+Ask your AI Teacher for help with Kiswahili words,
+sentences, grammar or conversation practice.
+</p>
+
+<input
+  id="aiQuestion"
+  type="text"
+  placeholder="Example: How do I say 'Where is the hotel?' in Kiswahili?"
+>
+
+<button class="btn primary" onclick="askAI()">Ask AI Teacher</button>
+
+<div id="aiResult" class="result"></div>
+
+</div>
+
+</div>
+</section>
+
+<section id="premium">
+<div class="container">
+
+<div class="premium">
+
+<h2>⭐ HemmaLingo Premium</h2>
+
+<p>
+Get access to deeper lessons, advanced quizzes,
+conversation practice and premium learning materials.
+</p>
+
+<br>
+
+<button class="btn primary" onclick="premiumMessage()">
+Join Premium
+</button>
+
+<p id="premiumResult" style="margin-top:15px;"></p>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+
+<h3>🌍 HemmaLingo</h3>
+
+<p>Jifunze. Elewa. Faulu.</p>
+
+<p>
+Learn Kiswahili anywhere, anytime.
+</p>
+
+<p style="margin-top:15px;">
+© 2026 HemmaLingo
+</p>
+
+</footer>
+
+<script>
+
+function lesson(name){
+  alert(
+    "HemmaLingo Lesson: " + name +
+    "\\n\\nLesson content will open here."
+  );
+}
+
+function checkAnswer(correct){
+
+  const result = document.getElementById("quizResult");
+
+  if(correct){
+    result.innerHTML = "🎉 Correct! +10 points";
+  }else{
+    result.innerHTML = "❌ Try again.";
+  }
+}
+
+function searchLessons(){
+
+  const search =
+    document.getElementById("searchBox")
+    .value.toLowerCase();
+
+  const cards =
+    document.querySelectorAll("#lessonCards .card");
+
+  cards.forEach(card => {
+
+    const text =
+      card.innerText.toLowerCase();
+
+    card.style.display =
+      text.includes(search) ? "block" : "none";
+
+  });
+}
+
+function askAI(){
+
+  const question =
+    document.getElementById("aiQuestion").value.trim();
+
+  const result =
+    document.getElementById("aiResult");
+
+  if(!question){
+    result.innerHTML =
+      "Please type a question first.";
+    return;
+  }
+
+  result.innerHTML =
+    "🤖 AI Teacher is ready. Connect an AI API here to receive real AI answers.";
+}
+
+function premiumMessage(){
+
+  document.getElementById("premiumResult").innerHTML =
+    "⭐ Premium access will be available soon.";
+}
+
+</script>
+
+</body>
+</html>
